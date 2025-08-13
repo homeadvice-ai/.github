@@ -1,0 +1,150 @@
+# Global Ownership
+# This file defines default code ownership for the entire organization
+# Each line is a file pattern followed by one or more owners
+
+# Default owners for all files
+# Use @org/team-name for team ownership or @username for individual ownership
+* @foxly-labs/platform-team
+
+# =============================================================================
+# INFRASTRUCTURE AND PLATFORM
+# =============================================================================
+
+# Platform and infrastructure repositories
+# Platform team owns these critical components
+foxly-platform/ @foxly-labs/platform-team
+foxly-platform/* @foxly-labs/platform-team
+
+# Infrastructure related files and directories
+infra/ @foxly-labs/platform-team
+infra/* @foxly-labs/platform-team
+
+# Infrastructure configuration files (anywhere in any repo)
+*.tf @foxly-labs/platform-team
+*.tfvars @foxly-labs/platform-team
+terraform/ @foxly-labs/platform-team
+terraform/* @foxly-labs/platform-team
+
+# Docker and containerization
+Dockerfile @foxly-labs/platform-team
+*.dockerfile @foxly-labs/platform-team
+docker-compose*.yml @foxly-labs/platform-team
+docker-compose*.yaml @foxly-labs/platform-team
+.dockerignore @foxly-labs/platform-team
+
+# Kubernetes and orchestration
+k8s/ @foxly-labs/platform-team
+kubernetes/ @foxly-labs/platform-team
+*.yaml @foxly-labs/platform-team
+*.yml @foxly-labs/platform-team
+helm/ @foxly-labs/platform-team
+
+# CI/CD and build systems
+.github/workflows/ @foxly-labs/platform-team
+.github/actions/ @foxly-labs/platform-team
+.gitlab-ci.yml @foxly-labs/platform-team
+Jenkinsfile @foxly-labs/platform-team
+buildspec.yml @foxly-labs/platform-team
+
+# Deployment and release
+deploy/ @foxly-labs/platform-team
+deployment/ @foxly-labs/platform-team
+scripts/deploy* @foxly-labs/platform-team
+scripts/release* @foxly-labs/platform-team
+
+# Monitoring and observability
+monitoring/ @foxly-labs/platform-team
+grafana/ @foxly-labs/platform-team
+prometheus/ @foxly-labs/platform-team
+*.monitoring.* @foxly-labs/platform-team
+
+# =============================================================================
+# PRODUCT TEAMS
+# =============================================================================
+
+# Each product team owns their respective repositories
+# Override the default platform team ownership for product-specific repos
+
+# Example product team repositories:
+# Uncomment and modify these patterns as needed for actual product repos
+
+# Product Team A repositories
+# product-a-* @foxly-labs/product-team-a
+# frontend-app/ @foxly-labs/product-team-a
+# mobile-app/ @foxly-labs/product-team-a
+
+# Product Team B repositories  
+# product-b-* @foxly-labs/product-team-b
+# analytics-service/ @foxly-labs/product-team-b
+# data-pipeline/ @foxly-labs/product-team-b
+
+# Product Team C repositories
+# product-c-* @foxly-labs/product-team-c
+# user-service/ @foxly-labs/product-team-c
+# auth-service/ @foxly-labs/product-team-c
+
+# =============================================================================
+# SHARED OWNERSHIP
+# =============================================================================
+
+# Documentation that requires both platform and product team review
+README.md @foxly-labs/platform-team @foxly-labs/product-team
+DOCS.md @foxly-labs/platform-team @foxly-labs/product-team
+docs/ @foxly-labs/platform-team @foxly-labs/product-team
+
+# Security-related files require security team review (if exists)
+# Uncomment if you have a dedicated security team
+# SECURITY.md @foxly-labs/security-team @foxly-labs/platform-team
+# security/ @foxly-labs/security-team @foxly-labs/platform-team
+# *.security.* @foxly-labs/security-team @foxly-labs/platform-team
+
+# Legal and compliance documents
+LICENSE @foxly-labs/platform-team
+COPYRIGHT @foxly-labs/platform-team
+legal/ @foxly-labs/platform-team
+compliance/ @foxly-labs/platform-team
+
+# Package management files
+package.json @foxly-labs/platform-team
+package-lock.json @foxly-labs/platform-team
+yarn.lock @foxly-labs/platform-team
+requirements.txt @foxly-labs/platform-team
+Pipfile @foxly-labs/platform-team
+Pipfile.lock @foxly-labs/platform-team
+Gemfile @foxly-labs/platform-team
+Gemfile.lock @foxly-labs/platform-team
+go.mod @foxly-labs/platform-team
+go.sum @foxly-labs/platform-team
+
+# =============================================================================
+# ADMINISTRATIVE
+# =============================================================================
+
+# Repository configuration and community health files
+.github/ @foxly-labs/platform-team
+CODEOWNERS @foxly-labs/platform-team
+CONTRIBUTING.md @foxly-labs/platform-team
+CODE_OF_CONDUCT.md @foxly-labs/platform-team
+PULL_REQUEST_TEMPLATE.md @foxly-labs/platform-team
+.github/ISSUE_TEMPLATE/ @foxly-labs/platform-team
+
+# Build and configuration files
+Makefile @foxly-labs/platform-team
+make/ @foxly-labs/platform-team
+.env.example @foxly-labs/platform-team
+config/ @foxly-labs/platform-team
+
+# =============================================================================
+# NOTES
+# =============================================================================
+
+# How to use this file:
+# 1. Patterns are matched in order from top to bottom
+# 2. The last matching pattern takes precedence
+# 3. Use @org/team-name for GitHub teams
+# 4. Use @username for individual users
+# 5. Multiple owners can be specified by separating with spaces
+# 6. Comments start with # and are ignored
+#
+# For more information about CODEOWNERS syntax:
+# https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
